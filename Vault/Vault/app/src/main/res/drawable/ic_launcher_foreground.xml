@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="108dp"
+    android:height="108dp"
+    android:viewportWidth="108"
+    android:viewportHeight="108">
+    <group android:translateY="-3">
+        <!-- lock body with a keyhole cut out of it -->
+        <path
+            android:fillColor="#FFFFFF"
+            android:fillType="evenOdd"
+            android:pathData="M41,52 h26 a5,5 0 0 1 5,5 v18 a5,5 0 0 1 -5,5 h-26 a5,5 0 0 1 -5,-5 v-18 a5,5 0 0 1 5,-5 z M52.5,72 V66.16 A3.5,3.5 0 1 1 55.5,66.16 V72 z" />
+        <!-- shackle -->
+        <path
+            android:fillColor="#00000000"
+            android:pathData="M44,52 v-8 a10,10 0 0 1 20,0 v8"
+            android:strokeColor="#FFFFFF"
+            android:strokeLineCap="round"
+            android:strokeWidth="5" />
+    </group>
+</vector>

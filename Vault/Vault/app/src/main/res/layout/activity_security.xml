@@ -1,0 +1,154 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/secRoot"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/bg"
+    android:orientation="vertical">
+
+    <TextView
+        style="@style/VaultLargeTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/screen_margin"
+        android:layout_marginTop="24dp"
+        android:text="Security" />
+
+    <TextView
+        style="@style/VaultCaption"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/screen_margin"
+        android:layout_marginTop="4dp"
+        android:text="Weak, breached and reused passwords" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/screen_margin"
+        android:layout_marginTop="20dp"
+        android:layout_marginEnd="@dimen/screen_margin"
+        android:orientation="horizontal">
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="10dp"
+            android:layout_weight="1"
+            android:background="@drawable/card_bg"
+            android:orientation="vertical"
+            android:padding="16dp">
+
+            <TextView
+                android:id="@+id/statWeak"
+                style="@style/VaultLargeTitle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="0"
+                android:textColor="@color/warn"
+                android:textSize="28sp" />
+
+            <TextView
+                style="@style/VaultCaption"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Weak" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="10dp"
+            android:layout_weight="1"
+            android:background="@drawable/card_bg"
+            android:orientation="vertical"
+            android:padding="16dp">
+
+            <TextView
+                android:id="@+id/statBreached"
+                style="@style/VaultLargeTitle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="0"
+                android:textColor="@color/danger"
+                android:textSize="28sp" />
+
+            <TextView
+                style="@style/VaultCaption"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Breached" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="@drawable/card_bg"
+            android:orientation="vertical"
+            android:padding="16dp">
+
+            <TextView
+                android:id="@+id/statReused"
+                style="@style/VaultLargeTitle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="0"
+                android:textColor="@color/warn"
+                android:textSize="28sp" />
+
+            <TextView
+                style="@style/VaultCaption"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Reused" />
+        </LinearLayout>
+    </LinearLayout>
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/btnCheck"
+        android:layout_width="match_parent"
+        android:layout_height="54dp"
+        android:layout_marginStart="@dimen/screen_margin"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="@dimen/screen_margin"
+        android:backgroundTint="@color/accent"
+        android:text="Check all passwords"
+        android:textColor="@android:color/white"
+        android:textSize="17sp"
+        app:cornerRadius="14dp" />
+
+    <TextView
+        android:id="@+id/tvProgress"
+        style="@style/VaultCaption"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:gravity="center" />
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1">
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/secList"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:clipToPadding="false"
+            android:paddingStart="@dimen/screen_margin"
+            android:paddingTop="16dp"
+            android:paddingEnd="@dimen/screen_margin"
+            android:paddingBottom="16dp" />
+
+        <TextView
+            android:id="@+id/tvAllGood"
+            style="@style/VaultCaption"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:text="Nothing needs attention."
+            android:visibility="gone" />
+    </FrameLayout>
+</LinearLayout>
